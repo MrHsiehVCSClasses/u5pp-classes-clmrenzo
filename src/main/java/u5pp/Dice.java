@@ -35,7 +35,15 @@ public class Dice
     }
 
     public int getCurrentSide(){
-        
+        return startingSide;
+    }
+
+    public String getColor(){
+        return color;
+    }
+
+    public String toString(){
+        System.out.println ()"The " + getColor() + getSides() + "- sided dice is showing" + getCurrentSide()) ;
     }
 }
 
