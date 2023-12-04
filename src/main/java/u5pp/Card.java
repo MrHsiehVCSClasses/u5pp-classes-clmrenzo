@@ -47,6 +47,7 @@ public class Card {
     }
 
     public void changeValue(String changeValue){
+        changeValue = changeValue.toLowerCase();
         if (changeValue.equals("2") || changeValue.equals("3") ||changeValue.equals("4") || changeValue.equals("5") || changeValue.equals("6") || changeValue.equals("7") || changeValue.equals("8") || changeValue.equals("9") || changeValue.equals("10") || changeValue.equals("jack") || changeValue.equals("queen") || changeValue.equals("king") ||changeValue.equals("ace")){
             value = changeValue.toLowerCase();
         }
