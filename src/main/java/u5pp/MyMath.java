@@ -3,23 +3,52 @@ package u5pp;
 public class MyMath {
     
     public static int abs(int x){
-        int num = Math.abs(x);
+        int num = x;
+        
+        if (num < 0){
+            num = num * (-1);
+        }
+
+        
         return num;
     }
 
     public static double abs(double dx){
-        double dnum = Math.abs(dx);
+        double dnum = dx;
+
+        if (dnum < 0){
+            dnum = dnum *(-1);
+        }
         return dnum;
     }
 
     public static double pow(double base, int exponent){
         double number = base;
-        int power = exponent;
-        return Math.pow(number, power );
+        if (exponent == 0){
+            return 1.0;
+        }
+        
+        for (int a = 0; a < exponent-1; a++){
+            base*= number;
+        }
+        return base;
     }
 
     public static int perfectSqrt(int square){
         int sr = square;
-        return Math.sqrt(sr);
+        
+        if (sr < 0) {
+            return -1; 
+        }
+        int sqrt = 0;
+        while (sqrt * sqrt <= sr) {
+            if (sqrt * sqrt == sr) {
+                return sqrt;
+            }
+            sqrt++;
+        }
+
+        return -1;
+
     }
 }
