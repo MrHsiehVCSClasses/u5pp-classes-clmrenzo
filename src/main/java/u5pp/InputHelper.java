@@ -12,6 +12,10 @@ public class InputHelper {
 
     }
 
+    public int getIntegerInput(String prompt, int min, int max) {
+        return 0;
+    }
+
     public boolean getYesNoInput(String prompt){
         String x = "l";
         System.out.println(prompt);
@@ -24,6 +28,7 @@ public class InputHelper {
         while (!x.substring(0,1).equals("y") && !x.substring(0,1).equals("Y") && !x.substring(0,1).equals("n") && !x.substring(0,1).equals("N")) {
             System.out.println("Invalid input - does not start with \"y\" or \"n\". Please try again.");
             System.out.println(prompt);
+            x=sc.nextLine();
         }
         if (x.substring(0,1).equals("y") || x.substring(0, 1).equals("Y")){
             return true;
@@ -34,4 +39,5 @@ public class InputHelper {
         // so it runs//
         return true;
     }
+    
 }
