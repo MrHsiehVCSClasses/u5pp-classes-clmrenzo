@@ -1,7 +1,7 @@
 package u5pp;
 
 public class MyMath {
-    
+    // makes an int absolute value//
     public static int abs(int x){
         int num = x;
         
@@ -12,7 +12,7 @@ public class MyMath {
         
         return num;
     }
-
+// makes a double absolute value//
     public static double abs(double dx){
         double dnum = dx;
 
@@ -21,7 +21,7 @@ public class MyMath {
         }
         return dnum;
     }
-
+// takes a double as a base number an int as exponent and solves//
     public static double pow(double base, int exponent){
         double number = base;
         if (exponent == 0){
@@ -33,7 +33,7 @@ public class MyMath {
         }
         return base;
     }
-
+// returns the squre root//
     public static int perfectSqrt(int square){
         int sr = square;
         

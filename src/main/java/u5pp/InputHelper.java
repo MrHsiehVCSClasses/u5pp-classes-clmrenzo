@@ -1,7 +1,7 @@
 package u5pp;
 
 import java.util.Scanner;
-
+// constructor that creates a scanner //
 public class InputHelper {
     // scanner
     private Scanner sc;
@@ -11,11 +11,25 @@ public class InputHelper {
         
 
     }
-
+// checks integer input//
     public int getIntegerInput(String prompt, int min, int max) {
-        return 0;
-    }
+        int minimum = min;
+        int z ;
+        int maximum = max;
+        System.out.println(prompt);
+        z= Integer.parseInt(sc.nextLine());
+        //series of while loops//
+        while (z < minimum) {
+            System.out.println("Invalid input - too low. Please try again.");
+            System.out.println(prompt);
+            z= Integer.parseInt(sc.nextLine());
+            
+        }
+        //while (z != )//
+        return z;
 
+    }
+//checks yes no input//
     public boolean getYesNoInput(String prompt){
         String x = "l";
         System.out.println(prompt);
